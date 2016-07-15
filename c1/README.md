@@ -175,7 +175,7 @@ var agency = function(ops)
 	agency.isAgency = true
 	return agency
 }
-
+```
 #### Conventions
 
 It’s important to follow the most common language conventions.
