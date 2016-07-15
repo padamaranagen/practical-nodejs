@@ -354,3 +354,5 @@ Visit http://127.0.0.1:8080/?port=5858 to start debugging.
 
 Step 5: Open the above link to start debugging
 
+[!alt tag](https://github.com/nagendramca2011/practical-nodejs/blob/develop/c1/debug.jpg)
+
