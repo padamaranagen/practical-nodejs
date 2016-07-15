@@ -303,3 +303,54 @@ fs.writeFile('message.txt', 'Hello World!', function (err) {
 	console.log('Writing is done.');
 });
 ```
+
+## Streaming Data in Node.js
+
+Streaming data is a phrase that means an application processes the data while it’s still receiving it. This feature is
+useful for extra large datasets such as video or database migrations.
+Here’s a basic example of using streams that output the binary file content back:
+```
+var fs = require('fs');
+fs.createReadStream('./data/customers.csv').pipe(process.stdout);
+```
+By default, Node.js uses buffers for streams. For more immersive instruction, take a look at [stream-adventure] (http://npmjs.org/stream-adventure)
+
+## Hello World Server with HTTP Node.js Module
+
+```
+var http = require('http'); 
+http.createServer(function (req, res) {//creates a server with a callback function which contains the response handler code
+res.writeHead(200, {'Content-Type': 'text/plain'});//set the right header and status code
+res.end('Hello World\n'); //output Hello World
+}).listen(3000, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:3000/');
+
+launch in your terminal/cmd the following command
+node server.js
+```
+
+
+## Debugging Node.js Programs
+
+Step 1: Install npm inspector utility
+```
+npm install -g node-inspector
+```
+Step 2: Create a server file called server.js
+```
+var express=require('express');
+var app=express();
+app.use(express.static(__dirname+"/public"));	
+app.listen(process.env.PORT || 3000)
+```
+Step 3: Start the server using the below
+C:\angularjs-sample-website>node --debug-brk server.js
+Debugger listening on port 5858
+
+Step 4: Open another terminal then type node-inspector
+C:\angularjs-sample-website>node-inspector
+Node Inspector v0.12.8
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+
+Step 5: Open the above link to start debugging
+
