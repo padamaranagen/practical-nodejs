@@ -218,7 +218,7 @@ methods, and events include the following:
 * [fs] (http://nodejs.org/api/fs.html)
 
 
-### http (http://nodejs.org/api/http.html)
+### [http] (http://nodejs.org/api/http.html)
 
 http is the main module responsible for the Node.js HTTP server. The main methods are as follows:
 
